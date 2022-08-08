@@ -34,8 +34,9 @@ export const ThemeProvider = ({initalTheme, children})=>{
     if(initalTheme){
         rawSetTheme(initalTheme)
     }
+
     useEffect(()=>{
-        rawSetTheme[theme]
+        rawSetTheme(theme)
     },[theme])
 
     return(
