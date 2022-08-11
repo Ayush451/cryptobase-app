@@ -12,7 +12,7 @@ const UserContext= createContext()
 
 
 
-export const AuthContextProvider = ((children)=>{
+export const AuthContextProvider = ({children})=>{
     const [user, setUser] = useState([])
 
     const signUp = (email, password)=>{
@@ -41,7 +41,7 @@ export const AuthContextProvider = ((children)=>{
             {children}
         </UserContext.Provider>
     )
-})
+}
 
 export const UserAuth = () =>{
     return useContext(UserContext)
